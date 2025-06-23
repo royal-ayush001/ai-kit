@@ -1,6 +1,6 @@
 getVariableFromQuery();
 var curMvDetail;
-fetch("../../admin/php/movieDataByName.php?name=" + m).then(ret => ret.json()).then(res => {
+fetch("https://api.coinsons.com/ai-kit/admin/php/movieDataByName.php?name=" + m).then(ret => ret.json()).then(res => {
 	log(res)
 	curMvDetail = res;
 	showCurDetail();
@@ -100,7 +100,7 @@ function getVariableFromQuery() {
 }
 
 function checkAndDirectDownload(lnk){
-	fetch("../../admin/php/checkFileExist.php?link=" + lnk).then(ret => ret.json()).then(res => {
+	fetch("https://api.coinsons.com/ai-kit/admin/php/checkFileExist.php?link=" + lnk).then(ret => ret.json()).then(res => {
 		if(res.status){
 			location.assign(res.lnk);
 		}
