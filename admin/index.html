@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin : Ai Player</title>
+
+  <!-- common -->
+  <link rel="stylesheet" href="../common/css/style.css">
+
+  <link rel="stylesheet" href="css.css">
+
+  <script src="../common/js/movieSiteLnk.js"></script>
+</head>
+<body>
+  <script src="js/logincheck.js"></script>
+
+  <div class="head">
+    <div class="name">Ai-Admin Panel</div>
+  </div>
+  <div class="menu">
+    <a href="https://github.com/github-priyanshu/ai-kit/edit/main/common/js/movieSiteLnk.js" target="__blank">
+      <button>Main Movie</button>
+    </a> 
+    <a href="https://github.com/github-priyanshu/ai-kit/edit/main/player/index.html" target="__blank">
+      <button>Update Index</button>
+    </a>
+    <a href="https://ai-kit2.netlify.app/admin/dudefilmscheck.html" target="__blank">
+      <button>check new movies</button>
+    </a>
+    <a href="https://bit.ly" col="#fff" target="__blank">
+      <button>Open Bitly</button>
+    </a>
+    <a href="https://ai-kit2.netlify.app/sharer" col="#fff" target="__blank">
+      <button>Share Panel</button>
+    </a>
+  </div>
+  <div class="botPan flex">
+    <div class="workPan" panFor="movie">
+      <div class="top flex">
+        <div id="movieCount">/...Add Movies</div>
+      </div>
+
+      <label class="w100p">
+        <div>Hubdrive Link</div>
+        <input type="text" class="autoPaste lnkIn" onchange="movie.onHubDrivePaste(this)">
+      </label>
+
+      <label class="w100p">
+        <div>Name</div>
+        <div class="flex">
+          <input class="name" type="text" oninput="movie.movieName=this.value"><button class="imgSrhBtn">Search</button>
+        </div>
+      </label>
+
+      <div class="w100p">
+        <div>Quality</div>
+        <label style="display: inline;"><i>480</i><input type="radio" name="quality" value="480" onclick="movie.movieQ=this.value"></label>
+        <label style="display: inline;"><i>720</i><input type="radio" name="quality" value="720" onclick="movie.movieQ=this.value"></label>
+        <label style="display: inline;"><i>1080</i><input type="radio" name="quality" value="1080" onclick="movie.movieQ=this.value"></label>
+        <label style="display: inline;"><i>2K</i><input type="radio" name="quality" value="2K" onclick="movie.movieQ=this.value"></label>
+        <label style="display: inline;"><i>4K</i><input type="radio" name="quality" value="4K" onclick="movie.movieQ=this.value"></label>
+      </div>
+
+      <div class="w100p">
+        <div>Img</div>
+        <input type="text" class="autoPaste imgIn" onchange="movie.movieImg=this.value">
+      </div>
+
+      <div class="w100p">
+        <select id="type">
+          <option value="1">Bollywood</option>
+          <option value="2">South Indian</option>
+          <option value="3">English movies</option>
+        </select>
+        <button onclick="movie.addMovies()">Add</button>
+      </div>
+
+    </div>
+
+    <div class="workPan" panFor="series">
+      <!-- SERIES -->
+      <div class="top flex">
+        <div id="seriesCount">/...Add Series</div>
+        <div>
+          <button>Reset</button>
+          <button onclick="copyOpen(this,data.series)" url="https://github.com/github-priyanshu/ai-kit/edit/main/common/js/webSeries.js">Copy & Open</button>
+        </div>
+      </div>
+
+      <label class="w100p">
+        <div>Episode 1 link</div>
+        <input type="text"  class="autoPaste lnkIn" oninput="addExtraSr(this)" onclick="addExtraSr(this)">
+      </label>
+
+      <div class="w100p">
+        <input type="number" id="enum" placeholder="No. of episodes" style="width:100px">
+        <button onclick='copyToClipboard(ExtraDetail.getAllEpisodeLinkOfSeries().join("\n"))'>Copy All Episode Link</button>
+      </div>
+
+      <label class="w100p">
+        <div>Name</div>
+        <div class="flex">
+          <input class="name" type="text"><button class="imgSrhBtn" onclick="searchImg(this)">Search</button>
+        </div>
+      </label>
+
+      <div class="w100p">
+        <div>Img</div>
+        <input type="text" class="autoPaste imgIn">
+      </div>
+
+      <label class="w100p">
+        <div>Drop.down (altLnk) all episodes</div>
+        <textarea id="seriesAltLnks" type="text" class="autoPaste altLnk w100p"></textarea>
+      </label>
+
+      <button onclick="addSeries()">Add</button>
+
+    </div>
+  </div>
+
+  <!-- common -->
+  <script src="../common/js/script.js"></script>
+
+  <script src="js/js.js"></script>
+</body>
+</html>

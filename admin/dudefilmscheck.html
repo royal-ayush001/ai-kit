@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin : Dudefilms check</title>
+
+  <!-- common -->
+  <link rel="stylesheet" href="../common/css/style.css">
+
+  <link rel="stylesheet" href="css.css">
+
+  <script src="../common/js/script.js"></script>
+  <script src="../common/js/movieSiteLnk.js"></script>
+  <script src="../common/js/movies.js"></script>
+  <script src="../common/js/webSeries.js"></script>
+</head>
+<body>
+  <div class="head">
+    <div class="name"><input type="text" id="dudedomain"> site <button onclick="check()">check</button></div>
+  </div>
+
+  <div class="menu">
+    <a href="https://github.com/github-priyanshu/ai-kit/edit/main/common/js/movieSiteLnk.js" target="__blank">
+      <button>Main Movie</button>
+    </a>
+    <a href="https://ai-kit2.netlify.app/admin/" target="__blank">
+      <button>Admin Panel</button>
+    </a>
+  </div>
+
+  <div class="botPan flex">
+    <div class="workPan" panFor="movie">
+      <div class="top flex">
+        <div id="movieCount">/...Check Movies</div>
+        <div>
+          <button>Reset</button>
+          <button onclick="copyToClipboard(op('#finalCodeMv').value);window.open('https://github.com/github-priyanshu/ai-kit/edit/main/common/js/movies.js')" >Copy & Open</button>
+        </div>
+      </div>
+
+      <div class="choosePanMv flex">
+        
+      </div>
+    </div>
+
+
+
+
+    <div class="workPan" panFor="series">
+      <!-- SERIES -->
+      <div class="top flex">
+        <div id="seriesCount">/...Add Series</div>
+        <div>
+          <button>Reset</button>
+          <button onclick="copyToClipboard('#finalCodeSr');window.open('https://github.com/github-priyanshu/ai-kit/edit/main/common/js/webSeries.js')">Copy & Open</button>
+        </div>
+      </div>
+      <div class="choosePanSr flex"></div>
+    </div>
+  </div>
+
+  <!-- common -->
+
+  <script>
+    resetFormat();
+  </script>
+  <script src="dudefilmsChecker.js"></script>
+  <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.dev{
+	margin-top: 160px;
+	padding: 0 40px;
+	align-items: flex-start;
+}
+.dev .profile{
+	top: -60px;
+	width: 200px;
+	height: 150px;
+	--br: 20px 20px;
+	border-radius: var(--br);
+	background: #fff;
+	box-shadow: 20px 0 60px #0006;
+	left: 30px;
+}
+.dev .profile > img{
+  width: 230px;
+  height: 230px;
+  border-radius: var(--br);
+  top: -60px;
+  box-shadow: 0 30px 90px #00000073;
+  pointer-events: none;
+}
+.dev .profile .links{}
+.dev .profile .links a{
+  width: 40px;
+  height: 40px;
+  margin: 0 25px;
+  background: #eee;
+  top: -40px;
+  border-radius: 5px;
+  box-shadow: 0 10px 40px #0006;
+}
+
+.dev .profile .links a img{
+	width: 30px;
+	height: 30px;
+	opacity: .8;
+}
+.dev .detail{
+	padding: 0 30px;
+	margin-top: 20px;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	padding-left: 40px;
+}
+.dev .detail p{
+	padding: 10px;	
+	margin-top: 10px;
+	font-size: .9em;
+	text-align: justify;
+	max-width: 300px;
+}
+.dev .detail p a{
+	color: #fff;
+}
+@media screen and (max-width: 925px){
+	.dev{
+		flex-flow: column;
+		align-items: center;
+		padding: 0;
+	}
+	.dev .profile{
+		--br: 5px 5px;
+		left: 0;
+	}
+	.dev .detail{
+		padding: 5px;
+	}
+	.dev .detail p{
+		padding: 0;
+		margin: 10px;
+	}
+}
