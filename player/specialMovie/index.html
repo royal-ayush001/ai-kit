@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pathaan Specials - Ai Player</title>
+
+	<meta name="theme-color" content="#c964d6">
+	<meta name="google" content="notranslate">
+	<meta property="og:image" content="https://static.tnn.in/photo/msid-96753367/96753367.jpg">
+
+	<link rel="manifest" href="manifest.json">
+	<link rel="shortcut icon" href="../logo/logo.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://ai-kit2.netlify.app/common/css/style.css">
+	<script src="https://ai-kit2.netlify.app/common/js/variables.js"></script>
+	<script src="https://ai-kit2.netlify.app/common/js/script.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Glory:wght@400&family=Encode+Sans+SC&display=swap" rel="stylesheet">
+
+</head>
+<style>
+	
+	body{
+		background: linear-gradient(45deg,#f4dcff,#eafff9);
+	}
+</style>
+<body>
+  <div class="top flex" style="align-self: flex-start;">  
+		<style>
+			*{font-family: Encode Sans SC;}
+			.turnRight svg{
+				transform: rotate(90deg);
+			}
+		</style>
+  	<div fs="1.2em" col="#8000ff">
+  		<p onclick="location.assign('https://ai-playerx.netlify.app')" style="display: inline-block;">
+  			<span class="head turnRight" bg="#fff" style="top: 3px; font-size: 20px;padding: 4px;border: 1px solid #444;border-radius: 50%;display: inline-block;width: 30px;height: 30px;margin: 10px;" fs="20px" ico="down"></span>
+	  		Ai Player:
+  		</p>
+  		<b fs="1.1em">Pathaan Specials</b>
+  	</div>
+	</div>
+
+	<div class="vidBx">
+		<video src="https://s24.drop.download:182/d/kxcu2bpb4xcdvbi4ro7zjcaatjqnaeikfukizxfh4p6wb2jauyru6zlzi22oentnlanvkceu/patnaam_AiPlayer.mp4" id="mainVid" controls controlsList="nodownload" style="margin: 20px 0;width: 100vw; max-width: 600px; aspect-ratio: 16/9;"></video>
+	</div>
+
+	<div class="infoBx w100p flex c">
+		<div class="nm">
+			File: <b>Pathaan movie watch & Download.</b>
+		</div>
+
+		<style>
+			.iconBx span{
+				width: 60px;
+		    aspect-ratio: 1/1;
+		    border: 2px solid var(--col);
+		    border-radius: 50%;
+		    margin: 22px;
+			}
+			.iconBx span svg{
+				fill:var(--col);
+			}
+			.downBtn{
+				border: 2px solid #ff23b3;
+				color: #ff23b3;
+				padding: 10px 20px;
+				border-radius: 99px;
+				margin: 10px;
+			}
+		</style>
+
+		<div class="iconBx w100p flex">
+			<span class="flex" ico="download" style="--col:#ffa700;" id="vidDown" onclick="vidDown();"></span>
+			<span class="flex" ico="share" style="--col:lime" id="vidShare" onclick="vidShare();"></span>
+		</div>
+		<script src="downAnShare.js"></script>
+
+		<button class="noBtn downBtn active">
+			Download App (1MB)
+		</button>
+
+		<style>
+			.dealBx{
+			}
+			.deals{
+				background: #000;
+				width: 100%;
+				max-width: 350px;
+				border-radius: 4px;
+				margin: 10px;
+				color: #fff;
+			}
+			.deals svg{
+				fill: #fff;
+				transform: scale(.6);
+			}
+			.deals > p{
+				margin: 0 2px 4px 2px;
+			}
+			.deals img{
+				width: calc(100% - 4px);
+				height: 100px;
+				border-radius: 4px;
+				object-fit: cover;
+				object-position: center;
+				margin: 2px;
+			}
+			.deals .opt p{
+				width: 200px;
+				padding: 10px 0;
+				margin: 10px 0;
+				background: #f1f1ff;
+				color: #1465ff;
+				text-align: center;
+				border-radius: 2px;
+			}
+		</style>
+
+		<div class="dealBx w100p flex c">
+			<div class="deals">
+				<img src="https://bit.ly/3kHJCqX" style="height: 400px">
+				
+				<div class="opt flex c">
+					<p onclick="window.open('https://amzn.to/3WEng79')">Amazon: <b>₹599</b></p>
+				</div>
+			</div>
+
+			<div class="deals" onclick="window.open('https://play.google.com/store/apps/details?id=net.one97.paytm')">
+				<img src="https://offercdn.paytm.com/blog/2021/07/rechargeBnrWeb.png">
+				<p>Use the code: <b onclick="copyToClipboard('aiplayer')"><span ico='share'></span>aiplayer</b></p>
+			</div>
+
+			<div class="deals" onclick="window.open('https://play.google.com/store/apps/details?id=net.one97.paytm')">
+				<img style="height:300px" src="https://indianhotdeal.com/wp-content/uploads/2022/12/d3fa8d8b-f76f-40bd-b384-db677cfdc219_11zon-1024x1024.jpeg">
+				<p>Activate this offer - code : <b onclick="copyToClipboard('aiplayer')"><span ico='share'></span>aiplayer</b></p>
+			</div>
+			
+			<div class="deals" onclick="window.open('https://snpdl.in/refer?code=PRIY9948UQ&utm_source=RefA1')">
+				<img src="https://cdn.grabon.in/gograbon/images/merchant/1550570362769.png">
+				<p>Special offer to win <b>₹125</b></p>
+			</div>
+			
+			<div class="deals" onclick="window.open('https://play.google.com/store/apps/details?id=com.cashkaro&referrer=r%3D19585273%26refname%3DPriyanshu%20Kumar%26utm_source%3Dapp_referral')">
+				<img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2020/08/CashKaro-says-Ratan-Tata.png">
+				<p>They pay to shop!</p>
+			</div>
+
+		</div>
+
+		<iframe data-aa='2156766' src='//ad.a-ads.com/2156766?size=336x280' style='width:336px; height:280px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+	</div>
+
+	<script>
+		resetFormat();
+	</script>
+
+	<script src="pwa.js"></script>
+	<script src="https://aimodules.netlify.app/appads/appAd.js"></script>
+	
+	<script src="func.js"></script>
+</body>
+</html>

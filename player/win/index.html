@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin & Win: Ai-Player</title>
+  <base href="../">
+  <meta name="google" content="notranslate">
+
+  <!-- <base href="https://ai-kit2.netlify.app/player/"> -->
+
+  <!-- common -->
+  <link rel="stylesheet" href="../common/css/style.css">
+  <link rel="stylesheet" href="../common/css/layout.css">
+  <script src="../common/js/variables.js"></script>
+  <script src="../common/js/script.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400&family=Encode+Sans+SC&display=swap" rel="stylesheet">
+
+  <script src="win/js/datasender.js"></script>
+</head>
+<body>
+  <script src="win/js/loadImg.js"></script>
+  <link rel="stylesheet" href="win/css/style.css">
+  <div class="banner">
+    <div class="top flex c">
+      <div class="texCen head">Ai-Player: Spin & Win</div>
+      <p class="lined">1 Year Anniversary</p>
+      <p>Total <i>winners</i>: <span id="winnerNum" fw="bolder">987</span> till Now.</p>
+    </div>
+  </div>
+
+  <div class="content flex c">
+    <div class="head texCen">Win from <span fs="1.1em" fw="bolder">₹50 Lakh+</span> Pool</div>
+    
+    <link rel="stylesheet" href="win/css/spinner.css">
+
+    <div class="resultBox">
+      <p class="texCen">Result will be declared in 7 days on <u>6<sup>th</sup> March, 2022 (Sunday)</u></p>
+      <div class="closer flex" onclick="result.hide();"><span>+</span></div>
+    </div>
+    <div class="spinP flex c"></div>
+    <p class="moti" fs="1.2em" col="#ff0055">Spin More, <span fw="bold">Chance to win </span> more.</p>
+
+    <script src="win/js/spinner.js"></script>
+  </div>
+
+  <script type="text/javascript" src="win/js/script.js"></script>
+</body>
+</html>

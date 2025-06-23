@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+Allow: /index.html?mid
+Allow: /?mid

@@ -1,0 +1,21 @@
+{
+  "short_name": "Ai Player",
+  "name": "Ai Player: Movies & WebSeries",
+  "description": "Here you can watch the all new movies and webseries for free. You can also watch the Local videos and by pasting the link",
+  "icons": [
+   {
+     "src": "192px.png",
+     "type": "image/png",
+     "sizes": "192x192"
+   },
+   {
+     "src": "512px.png",
+     "type": "image/png",
+     "sizes": "512x512"
+   }
+  ],
+  "start_url": "https://ai-playerx.netlify.app/",
+  "background_color": "#c964d6",
+  "display": "standalone",
+  "theme_color": "#c964d6"
+ }

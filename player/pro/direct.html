@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ai Player: Premium</title>
+	<meta name="google" content="notranslate">
+
+	<!-- <base href="../"> -->
+	<base href="https://ai-kit2.netlify.app/player/">
+
+	<link rel="stylesheet" href="../common/css/style.css">
+	<link rel="stylesheet" href="pro/style.css">
+
+	<script src="../common/js/script.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+	<style>
+		.main{
+			height: 290px;
+		}
+	</style>
+	<div class="main flex c">
+		<p fs="1.4em" class="head">Ai Player Premium</p>
+
+		<div class="pan flex c">
+			<p fw="bold" col="#ff3000" class="warn">Don't Close it!!</p>
+			<p fw="bold" col="#ff3000" class="warn">It will be closed automatically</p>
+			<button class="noBtn" onclick="clicked();" bg="#0099ff" col="#fff" fs="1.1em">Click Me</button>
+			<p>Click the above button to continue...</p>
+		</div>
+	</div>
+
+	<script>resetFormat();</script>
+	<script>
+		var url=location.hash.replace("#","");
+		function clicked(){
+			localStorage.setItem("clicked",'true');
+			console.log(localStorage)
+			setTimeout(()=>{
+				console.log(localStorage);
+				window.open(url);
+			},500);
+		}
+		window.onfocus=()=>{
+			localStorage.removeItem("clicked")
+		}
+		// setTimeout(()=>{window.open(url);},1000)
+	</script>
+</body>
+</html>

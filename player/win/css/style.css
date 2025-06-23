@@ -1,0 +1,21 @@
+body{
+	font-family: glory;
+}
+.banner .top .head {
+	font-size: 2em;
+	margin: 10px 0;
+}
+.banner .top p{
+	margin: 5px 0;
+}
+.banner{
+	margin-bottom: 30px;
+}
+
+.content {
+	color: #222;
+}
+.content .head{
+	font-size: 2em;
+	color: #ff3451;
+}
