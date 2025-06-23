@@ -1,0 +1,176 @@
+.content{
+  background: #0009;
+}
+.content .head{
+  width: 60%;
+  top: -25px;
+  height: 50px;
+  background: var(--stdBg);
+  color: #000;
+  border-radius: 3px;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-shadow: 0 10px 40px #0005;
+}
+.content .head .srhBox {
+  border: 1px solid #222;
+  border-radius: 3px;
+  align-items: stretch;
+  background: #222;
+  color:#fff;
+  padding: 0 5px;
+}
+.content .head .srhBox svg{
+  width: 1.4em;
+  fill: #333;
+}
+#category,
+.content .head .srhBox input{
+  color: #fff;
+  padding: 3px;
+  height: 30px;
+}
+#category{
+  border-radius: 3px;
+  background: #222;
+  color: #fff;
+}
+.content .listPan{
+  flex-flow: row wrap;  
+}
+.moviePan{
+  margin: 30px 20px;
+  width: 100%;
+  border-radius: 3px;
+  background: #333;
+  color: #333;
+  box-shadow: 0 1px 2px #00000020;
+  max-width: 200px;
+  border: 3px solid #555;
+  border-radius: 7px;
+}
+/*A-ADS*/
+.content .a-ads {
+  max-width: 600px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.content .a-ads a{
+  background: #000;
+  padding: 10px;
+}
+
+.content .listPan .moviePan.series .data{
+  height: 100%;
+  color: #333;
+}
+.content .listPan .moviePan.series .eps{
+  flex-flow: row wrap;
+  margin: 10px 0;
+}
+.content .listPan .moviePan.series .eps > div{
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 1px;
+  background: #fff;
+  margin: 10px; 
+}
+
+.content .listPan .moviePan .poster .name{
+/*   position: absolute; */
+  bottom: 50px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 4px #000;
+  transition: all .25s;
+}
+.content .listPan .moviePan.series:hover .poster .name{
+  transform: scale(.7) translateY(-30px);
+  opacity: 0;
+}
+.content .listPan .moviePan .poster img,
+.content .listPan .moviePan .poster{
+  border-radius: 5px;
+  object-fit: cover;
+  aspect-ratio: 5/7;
+}
+.content .listPan .moviePan .data{
+  width: 100%;
+/*   justify-content: space-between; */
+  fill: #fff;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: linear-gradient(#0000,#000);
+  border-radius: 0 0 5px 5px;
+  
+}
+.content .listPan .moviePan .data .name{
+  padding: 30px 5px 5px 5px;
+  text-align: center;
+}
+
+.content .listPan .moviePan.series .downPan{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0004;
+  border-radius: 3px 3px 0 0;
+  pointer-events: none;
+  opacity: 0;top: 0;
+}
+.content .listPan .moviePan.series:hover .downPan{
+  opacity: 1;
+  pointer-events: all;
+}
+.content .listPan .moviePan .data .mvActBtn{
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  cursor: pointer;
+  fill: #444;
+  padding: 5px;
+}
+.content .listPan .moviePan .data .mvActBtn::before{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 90%;
+  height: 10%;
+  background: var(--c);
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+@media screen and (max-width: 772px){
+  .content{
+    --br: 20px;
+  }
+  .content .head {
+    width: 80%;   
+  }
+}
+@media screen and (max-width: 527px){
+  .content{
+    --br: 10px;
+  }
+  .content .head {
+    width: 90%;   
+  }
+  .content .head select{
+    font-size: .9em;
+  }
+  .content .head .srhBox input{
+    width: 130px;
+  }
+  .content .moviePan{
+    margin: 15px 8px;
+    max-width: 150px;
+  } 
+  
+}

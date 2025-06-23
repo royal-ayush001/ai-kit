@@ -1,0 +1,75 @@
+.loadShowAd{
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background: #fffd;
+	border-radius: 10px;
+	position: absolute;
+	color: #000;
+	padding: 5px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .2s;
+}
+.loadShowAd.active{
+	opacity: 1;
+	transition: all 2s;
+	pointer-events: auto;
+}
+.loadShowAd .skipBx{
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	padding: 5px;
+	background: #0005;
+	padding: 5px 10px;
+}
+
+.loadShowAd .cont{
+	height: calc(100% - 15px);
+	align-items: stretch;
+}
+.poll{
+	width: 100%;
+	padding: 10px;
+	background: #f1f1ff;
+	border-radius: 20px;
+}
+.poll .q{
+	font-size: 1.1em;
+	margin-bottom: 10px;
+}
+.poll .optPan .ans{
+	padding: 5px 10px;
+	width: 100%;
+	background: #fff;
+	margin: 2px 0;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+.loadShowAd .cont .fr{
+	max-width: 50%;
+	justify-content: space-between;
+}
+.loadShowAd .cont .fr img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.loadShowAd .cont .fr .offerTxt{
+	font-size: 3em;
+}
+
+.loadShowAd .cont .fr button{
+	padding: 10px 30px 10px 10px;
+	border-radius: 30px;
+	background: #0058ff;
+	letter-spacing: 1px;
+	margin: 20px;
+}
+
+@media screen and (max-width: 590px){
+	
+.loadShowAd .cont .fr .offerTxt{
+	font-size: 1.5em;
+}
+}

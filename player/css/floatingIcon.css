@@ -1,0 +1,22 @@
+.ficon{
+	display: none;
+}
+.ficon.active{
+	display: flex;	
+}
+
+.ficon .clicker{
+	background: #fff;
+	padding: 3px 2px;
+	border-radius: 99px;
+	font-size: 1.1em;
+	color: #555;
+	box-shadow: 0 10px 40px #0004; 
+}
+.ficon .clicker p{
+	margin: 0 7px;
+}
+.ficon .clicker img{
+	width: 40px;
+	border-radius: 50%;
+}

@@ -1,0 +1,28 @@
+.menuPan{
+	max-width: calc(100% - 10px);
+	overflow: ;
+	margin-bottom: 100px;
+	background: var(--stdBg);
+  border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 20px 50px #0005;
+}
+.menuBar{
+	width: 100%;
+	flex-flow: row wrap;
+}
+
+.menuBar .menu{
+	min-width: 100px;
+	padding: 5px 10px;
+	margin: 4px;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 4px;
+}
+
+.menuBar .menu.active{
+	background: #222;
+	color: #fff;
+	border-color:#000;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mobile Console</title>
+</head>
+<style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      position: relative;
+   }
+
+   body {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+   }
+
+   .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .pan {
+      border: 1px solid #0099ff;
+      font-family: monospace;
+      margin-bottom: 50%;
+   }
+
+   .in {
+      padding: 4px 10px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #777;
+      background: none;
+      width: 100%;
+      display: block;
+      resize: vertical;
+      color: #fff;
+   }
+
+   .out {
+      padding: 4px 10px;
+   }
+
+   .btnPan {
+      justify-content: space-between;
+      padding: 10px;
+   }
+
+   .btnPan button {
+      padding: 3px 10px;
+   }
+   h1{
+      text-align: center;
+      margin-bottom: 50px;
+      font-family: sans-serif;
+      font-size: 3.3em;
+      font-weight: 100;
+   }
+</style>
+
+<body>
+   <h1>My own JavaScript Console</h1>
+   <div class="pan">
+      <div class="work">
+         <textarea type="text" class="in" autofocus onblur="run(this)"></textarea>
+      </div>
+      <div class="btnPan flex">
+         <button onclick="back()">Prev</button>
+         <button onclick="next()">Next</button>
+      </div>
+   </div>
+
+
+   <script>
+      var log = console.log, pan = op('.work'), commands, codeNum = 0, commandIn = op('.in'), maxCode = 100;
+
+      if (!localStorage.getItem('console')) {
+         localStorage.setItem('console', '[]');
+      } else {
+         commands = JSON.parse(localStorage.getItem('console'));
+      }
+
+      function cls(){
+         opp('.out').forEach(cla=>{cla.remove()})
+      }
+
+      function next() {
+         if (codeNum > 0) {
+            let data = commands[--codeNum];
+            if (data) {
+               commandIn.value = data;
+            }
+         }
+      }
+      function back() {
+         if (codeNum < commands.length) {
+            let data = commands[codeNum++];
+            if (data) {
+               commandIn.value = data;
+            }
+         }
+      }
+
+      op('textarea').addEventListener('keyup', (e) => {
+         if (e.key == 'Escape') {
+            run(op('textarea'));
+         }
+      })
+
+      function run(elem) {
+         if (elem.value) {
+            saveCode(elem.value);
+
+            pan.insertAdjacentHTML('beforebegin', `<div class="out" style='color: #ddd;'><pre>${elem.value}</pre></div>`);
+            try {
+               pan.insertAdjacentHTML('beforebegin', `<div class="out" style='color: #0099ff; border-bottom: .5px dashed #ddd;'><pre>${getData(eval(elem.value))}</pre></div>`)
+            } catch (err) {
+               pan.insertAdjacentHTML('beforebegin', `<div class="out" style="color: #f00; border-bottom: .5px dashed #ddd;">${err}</div>`)
+            }
+            elem.value = '';
+         }
+      }
+
+      var obj = {
+         a: {
+            c: "val11",
+            d: "val12"
+         },
+         b: "val2"
+      }
+
+      var a = 0;
+      function getData(data) {
+         if (typeof data == 'object') {
+            var elem = ''
+            for (val in data) {
+               var dataIn = data[val];
+               if (typeof data[val] == 'object') {
+                  dataIn = getData(data[val]);
+               }
+               elem += `<details><summary>${val}: ${data[val]}</summary>${dataIn.toString()}</details>`;
+            }
+            return elem;
+         }
+         return data;
+      }
+
+      function saveCode(code) {
+         var prev = localStorage.getItem('console');
+         prev = JSON.parse(prev);
+         prev.unshift(code);
+         prev = prev.slice(0, maxCode);
+         commands = prev;
+         if (code != prev[1]) {
+            localStorage.setItem('console', JSON.stringify(prev))
+         }
+         codeNum=0;
+      }
+
+      function op(elem) { return document.querySelector(elem) }
+      function opp(elem) { return document.querySelectorAll(elem) }
+   </script>
+</body>
+
+</html>

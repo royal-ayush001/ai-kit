@@ -1,0 +1,60 @@
+.noti{
+  position: fixed;
+  bottom: 0px;
+  width: calc(100% - 10px);
+  background: #222;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 30px #0009;
+  text-align: center;
+  z-index: 2;
+}
+.noti .top{
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+.noti .bottom {
+  height: 0px;
+  overflow: hidden;
+  transition: all .25s;
+}
+.noti.active .bottom{
+  height: 290px;
+}
+.noti .bottom > *{
+  margin-bottom: 15px;
+  color: #fff;
+}
+.noti .lined::before,
+.noti .lined::after{
+  background: #555;
+}
+.noti .top .bar{
+  width: 40px;height: 4px;
+  background: #777;
+  border-radius: 5px;
+}
+
+.noti .img img{
+  width: 100px;
+  margin: 0 5px;
+}
+.noti a{text-decoration: none;}
+.noti button{
+  border-radius: 2px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.1em;
+}
+.noti button svg{
+  fill: #fff;
+  margin-left: 5px;
+}
+.noti ul{
+  text-align: left;
+}
+.noti ul li{
+  margin: 5px 0;
+  margin-left: 30px;
+}

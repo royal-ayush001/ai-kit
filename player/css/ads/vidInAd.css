@@ -1,0 +1,54 @@
+.vidPan .vidInAds{
+	position: absolute;
+	height: 100%;
+	background: #111;
+	top: 0;
+	left: 0;
+	display: none;
+	visibility: none;
+	color: #444;
+}
+.shareBx{
+	min-width: 300px;
+	min-height: 200px;
+	border-radius: 10px;
+	padding: 0 10px;
+	background: #fff;
+	font-size: 1em;
+}
+
+.shareBx p{
+	text-align: center;
+}
+.shareBx .lined::after,
+.shareBx .lined::before{
+	background: #333;	
+}
+
+.shareBx > *{
+	margin: 4px 0;
+}
+.shareBx button{
+	margin: 0 5px;
+	padding: 10px;
+	border-radius: 50%;
+	fill: #fff;
+}
+.shareBx .shBtn ~ button{
+  border: 1px solid;
+	border-radius: 4px;
+	color: #f00;
+}
+
+.vidPan .vidInAds.active{
+	display: flex;
+	visibility: visible;	
+}
+@media screen and (max-width: 550px){
+.vidPan .vidInAds .mnContent .head{
+	display: none;
+}
+.vidPan .vidInAds .mnContent .ads iframe{
+	margin: 5px;
+}
+}
